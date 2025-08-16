@@ -133,13 +133,15 @@ async function fetchQuotesFromServer() {
     }
 }
 
-// Post a new quote to server
+// ✅ Post a new quote to server with correct "Content-Type"
 async function postQuoteToServer(quote) {
     try {
         const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
             body: JSON.stringify(quote),
-            headers: { 'Content-type': 'application/json; charset=UTF-8' }
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8' // <-- Corrected capitalization
+            }
         });
         const data = await response.json();
         console.log("Posted to server:", data);
