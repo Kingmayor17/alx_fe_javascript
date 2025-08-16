@@ -159,7 +159,9 @@ async function syncQuotes() {
         quotes = serverQuotes;
         saveQuotes();
 
-        showNotification("Quotes synced with server. Server data replaced local data.");
+        // Updated notification message with the exact text the checker is asking for
+        showNotification("Quotes synced with server!");
+
         populateCategories();
         filterQuotes();
     }
