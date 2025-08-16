@@ -8,8 +8,9 @@
 <body>
     <h1>Dynamic Quote Generator</h1>
 
+    <!-- Dropdown for category filter -->
     <select id="categoryFilter" onchange="filterQuotes()"></select>
-    
+
     <div id="quoteDisplay"></div>
 
     <button onclick="showRandomQuote()">Show New Quote</button>
@@ -18,6 +19,9 @@
     <input type="text" id="newQuote" placeholder="Enter quote">
     <input type="text" id="newCategory" placeholder="Enter category">
     <button onclick="addQuote()">Add Quote</button>
+
+    <!-- Notification area (for showing messages) -->
+    <div id="notification"></div>
 
     <script src="script.js"></script>
 </body>
